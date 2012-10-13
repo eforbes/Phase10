@@ -16,7 +16,6 @@ public class Card {
 
 	private int color;
 	private int value;
-	private int id;
 
 	/**
 	 * 
@@ -27,10 +26,9 @@ public class Card {
 	 * @param i
 	 *            the unique id of this card
 	 */
-	public Card(int c, int v, int i) {
+	public Card(int c, int v) {
 		color = c;
 		value = v;
-		id = i;
 	}
 
 	/**
@@ -48,10 +46,12 @@ public class Card {
 	}
 
 	/**
-	 * @return the id
+	 * Checks to see if two cards contain the same information
+	 * @param other the card to be compared to
+	 * @return true if they have the same color and value, otherwise false
 	 */
-	public int getId() {
-		return id;
+	public boolean equals(Card other) {
+		return (color == other.getColor() && value == other.getValue());
 	}
 
 }
