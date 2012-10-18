@@ -16,7 +16,7 @@ public class Player {
 
 	private String name;
 	private int score;
-	private Card[] hand;
+	private Hand hand;
 	private int phase;
 
 	/**
@@ -26,6 +26,7 @@ public class Player {
 		name = "";
 		score = 0;
 		phase = 1;
+		hand = new Hand();
 	}
 
 	/**
@@ -38,6 +39,7 @@ public class Player {
 		name = n;
 		score = 0;
 		phase = 1;
+		hand = new Hand();
 	}
 
 	/**
@@ -80,22 +82,15 @@ public class Player {
 	/**
 	 * Increment the player's phase by 1
 	 */
-	public void incrementPhase() {
+	void incrementPhase() {
 		phase++;
 	}
 
 	/**
 	 * @return the player's hand
 	 */
-	public Card[] getHand() {
+	public Hand getHand() {
 		return hand;
-	}
-
-	/**
-	 * @return the number of cards in this player's hand
-	 */
-	public int getHandSize() {
-		return hand.length;
 	}
 
 }

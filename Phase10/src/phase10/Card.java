@@ -54,4 +54,22 @@ public class Card {
 		return (color == other.getColor() && value == other.getValue());
 	}
 
+	/**
+	 * Gives the points value of this card when it is remaining in your hand at the end of a round
+	 * @return the points value
+	 */
+	public int getPointValue()
+	{
+		if (value>=1 && value<=9)
+			return 5;
+		if (value>=10&&value<=12)
+			return 10;
+		if (value==13) //Skip
+			return 15;
+		if (value==14) //Wild
+			return 25;
+		
+		return 0; //default, should never happen
+	}	
+	
 }
