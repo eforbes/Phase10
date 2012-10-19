@@ -1,10 +1,10 @@
 package gui;
 
-//import main.GameManager;
+import phase10.Player;
 
 public class GuiManager {
 	
-	private GameFrame mainframe;
+	private SettingsFrame settingsWindow;
 //	public GameManager mainManager;
 
 	
@@ -16,6 +16,10 @@ public class GuiManager {
 //		mainManager = m; //passes a reference from the game manager into the GUI manager
 //	}
 	
+
+	
 	public void initGame() {
 	}
+	
+	
 }
